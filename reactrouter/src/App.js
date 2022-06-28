@@ -4,6 +4,7 @@ import './App.css';
 import { Routes, Route, Link } from "react-router-dom";
 import Home from './pages/Home.js';
 import Blogs from './pages/Blogs.js';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="blogs" element={<Blogs />} />
       </Routes>
+
+      <Navbar />
+      
       </header>
     </div>
   );
