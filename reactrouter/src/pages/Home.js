@@ -1,6 +1,6 @@
 export default Home => {
     return (
-        <h1>Home Page</h1>
+        <h1>Welcome to my React Router Project!</h1>
     )
 }
 

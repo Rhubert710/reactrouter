@@ -1,17 +1,38 @@
 import { Routes, Route, Link } from "react-router-dom";
+import { useState } from "react";
 
 
-function Navbar()
+function Navbar(props)
 {
+ 
+    const [activeButton, setActiveButton] = useState('Home')
+    const buttons = ['Home', 'About', 'Blogs', 'Participants']
+
+    function setActive(params) 
+    {
+        
+    }
     return (
-        <nav>
-            <div>nav</div>
+        <nav id="nav">
 
-            <Routes>
-                <Route path="/" element={<Link to="/blogs">Go to Blogs</Link>} />
-                <Route path="blogs" element={<Link to="/">Go Home</Link>} />
-            </Routes>
+            {buttons.map((buttonName, i) => (
 
+                <Link to={buttonName}
+
+                    key={`button-${i}`}
+
+                    onClick={(e) => setActiveButton( buttonName )}
+
+                    className={buttonName == activeButton? "activeButton navButton" : "navButton"}
+
+
+
+                >
+                    
+                    {buttonName.toUpperCase()}
+
+                </Link>
+            ))}
         </nav>
     )
 }
