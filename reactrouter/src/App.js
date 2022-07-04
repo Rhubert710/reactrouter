@@ -13,12 +13,18 @@ function App() {
     <div className="App">
       {/* HEADER */}
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>React-Router</h1>
+
+        {/* TITLE DIV */}
+        <div className='title_div'>
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1>React-Router</h1>
+        </div>
+
+        {/* NAVBAR */}
+        <Navbar activeButton  setActiveButton/>
+
       </header>
 
-      {/* NAVBAR */}
-      <Navbar activeButton  setActiveButton/>
 
       {/* CONTENT  ROUTES */}
       <div id='content'>
